@@ -4,5 +4,6 @@ function halloDu() {
         document.getElementById("demo").innerHTML =
             "Hey" + person;
     }
+    console.log(halloDu + "!");
 }
 //# sourceMappingURL=Aufgabe0.js.map
