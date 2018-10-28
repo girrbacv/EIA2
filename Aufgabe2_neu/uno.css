@@ -1,0 +1,155 @@
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+@charset "ISO-8859-1";
+
+#Ablage{
+	background-color: black;
+	width:116px;
+	height:185px;
+	border:solid thin black;
+	border-radius:25px;
+	position: absolute;
+	right:400px;
+	top:40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	color:#FFD700;
+ 
+	
+}
+#Nachziehen{
+	background-color: black;
+	width:116px;
+	height:185px;
+	border:solid thin black;
+	border-radius:25px;
+	position: absolute;
+	left:400px;
+	top:40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	color:#FFD700;
+ 
+	
+}
+.innerBox{
+  display:table-cell;
+  vertical-align:middle;
+  position: absolute;
+  left: 9px;
+  top: 70px;
+  border-radius:5px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size:30pt;
+  text-shadow: 3px 2px black;
+  background-color:red;
+  width: 100px;
+  height: 50px;
+  transform: rotate(-20deg);
+}
+#Handkarten {
+	width: 100%;
+	border-style: none;
+	height: 185px;
+	bottom: 80px;
+	left: 60px;
+	position: absolute;
+	
+}
+
+.Handkarten {
+	display: inline-block;
+	margin: 5px;
+	border: solid thin black;
+	
+	
+	}
+
+.red{
+	background-color: #f73429;
+	width:116px;
+	height:185px;
+	outline: solid thin black;
+	border:solid thick white;
+	top:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: 3px 2px black;
+	font-size: 30pt;
+	text-align: center;
+	color:white;
+	border-radius:5px;
+	box-sizing:border-box;
+	
+	
+	}
+
+.blue{
+	background-color: #2c57d2;
+	width:116px;
+	height:185px;
+	outline: solid thin black;
+	border:solid thick white;
+	top:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: 3px 2px black;
+	font-size: 30pt;
+	text-align: center;
+	color:white;
+	border-radius:5px;
+	box-sizing:border-box;
+	
+}
+
+.green{
+	background-color: #008a4e;
+	width:116px;
+	height:185px;
+	outline: solid thin black;
+	border:solid thick white;
+	top:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: 3px 2px black;
+	font-size: 30pt;
+	text-align: center;
+	color:white;
+	border-radius:5px;
+	box-sizing:border-box;
+	
+
+	}
+	
+	
+.yellow{	
+	background-color: #ffe300;
+	width:116px;
+	height:185px;
+	outline: solid thin black;
+	border:solid thick white;
+	top:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: 3px 2px black;
+	font-size: 30pt;
+	text-align: center;
+	color:white;
+	border-radius:5px;
+	box-sizing:border-box;
+	}
+
+.black{
+	background-color: black;
+	width:116px;
+	height:185px;
+	outline: solid thin black;
+	border:solid thick white;
+	top:10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: 3px 2px black;
+	font-size: 30pt;
+	text-align: center;
+	color:white;
+	border-radius:5px;
+	box-sizing:border-box;
+	}
+}
