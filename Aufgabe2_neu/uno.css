@@ -61,7 +61,7 @@
 
 .Handkarten {
 	display: inline-block;
-	margin: 5px;
+	margin: 10px;
 	border: solid thin black;
 	
 	
@@ -81,6 +81,8 @@
 	color:white;
 	border-radius:5px;
 	box-sizing:border-box;
+	margin-left: 15px;
+	margin-right: 15px;
 	
 	
 	}
@@ -99,6 +101,8 @@
 	color:white;
 	border-radius:5px;
 	box-sizing:border-box;
+	margin-left: 15px;
+	margin-right: 15px;
 	
 }
 
@@ -116,6 +120,8 @@
 	color:white;
 	border-radius:5px;
 	box-sizing:border-box;
+	margin-left: 15px;
+	margin-right: 15px;
 	
 
 	}
@@ -135,6 +141,8 @@
 	color:white;
 	border-radius:5px;
 	box-sizing:border-box;
+	margin-left: 15px;
+	margin-right: 15px;
 	}
 
 .black{
@@ -150,6 +158,8 @@
 	text-align: center;
 	color:white;
 	border-radius:5px;
+	margin-left: 15px;
+	margin-right: 15px;
 	box-sizing:border-box;
 	}
 }
