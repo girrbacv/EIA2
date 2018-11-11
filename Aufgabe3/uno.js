@@ -1,3 +1,10 @@
+/*Aufgabe: Aufgabe 3: Events - UNO
+   Name: Verena Girrbach
+   Matrikel:
+   Datum: 11.11.18
+   Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+   Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.
+   */
 var uno;
 (function (uno) {
     document.addEventListener("DOMContentLoaded", select);
