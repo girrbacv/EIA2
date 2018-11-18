@@ -1,3 +1,10 @@
+  /*Aufgabe: Aufgabe 3: Events - UNO
+      Name: Verena Girrbach
+      Matrikel: 
+      Datum: 17.11.18
+      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+      NOCH NICHT FUNKTIONSFÄHIG
+      */
 namespace christmastree{
      window.addEventListener("DOMContentLoaded", init);
     
