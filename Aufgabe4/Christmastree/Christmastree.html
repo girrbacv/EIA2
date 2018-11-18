@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Weihnachtsbaumkonfigurator</title>
+<link rel="stylesheet" href="Christmastree.css" type="text/css" media="screen"/>
+<script src="Christmastree.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+	<h1>Your perfect Christmastree</h1>
+
+<main>	
+	<fieldset id="tree">
+		<legend> 1. wähle deinen Weihnachtsbaum: </legend>
+	</fieldset>
+
+	<fieldset id="holder">
+		<legend> 2. wähle die Halterung für deinen Baum: </legend>
+	</fieldset>
+
+	<fieldset id="decoration">
+		<legend> 3. wähle deinen Baumschmuck </legend>
+	</fieldset>
+
+	<fieldset id="Lights">
+		<legend> 4. wähle deine Weihnachtsbaumbeläuchtung </legend>
+	</fieldset>
+
+	<hr>
+
+	<fieldset id="lieferung">
+		<legend> 5. wähle deine Lieferart </legend>
+	</fieldset>
+
+	<hr>
+	
+	</main>
+	
+	<aside>
+	<fieldset id="cart">
+		<legend>Bestellübersicht</legend>
+		<span id="productoverview"></span>
+		<span id="total">Gesamtbetrag: 0€</span>
+	</fieldset>
+	
+
+	<fieldset id="data">
+		<legend> 5. deine Daten </legend>
+
+		<input type="text" name="Text" placeholder="Nachname" /> 
+		<hr>
+		<input type="text" name="Text" placeholder="Vorname" />
+		<hr>
+	    <input type="text" name="text" placeholder="Straße & Hausnummer" /> 
+	    <hr> 
+	    <input type="text" pattern="[0-9]{5}" name="Mail" placeholder="Postleitzahl" />
+		<hr> 
+		<input  type="text" name="text" placeholder="Ort" />
+		
+		<div>
+					<button name="Button" type="submit" id="proofOrder">Bestellung
+						prüfen und abschicken</button>
+		</div>
+	</fieldset>
+	</aside>
+
+</body>
+</html>
