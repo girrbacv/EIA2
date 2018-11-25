@@ -5,11 +5,11 @@ namespace Christmastree{
         price: number;
      }
     
-    export interface products{
+    export interface items{
        [key: string]:product[];
        }
     
-    export let data : products
+    export let data : items
        ={
              "trees": [
                 {name:"Nordmanntanne", price: 34.95 },
