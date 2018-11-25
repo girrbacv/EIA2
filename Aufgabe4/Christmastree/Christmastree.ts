@@ -3,7 +3,7 @@
       Matrikel: 
       Datum: 25.11.18
       Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
-           
+      NOCH NICHT FUNKTIONSFÄHIG!     
 */
 namespace Christmastree{
     window.addEventListener("DOMContentLoaded", init)
