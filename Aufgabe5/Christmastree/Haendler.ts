@@ -38,6 +38,10 @@ namespace Christmastree{
               "lametta":[
                 {name:"Lametta silber", price:1.49},
                 {name:"Lametta gold", price:1.49}
+                ],
+              "shipping":[
+                {name:"DHL Standard Lieferung (3-7 Werktage)", price:0.00},
+                {name:"Expressversand (1-3 Werktage)", price:5.99}
                 ]
               
             

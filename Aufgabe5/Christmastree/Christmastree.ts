@@ -1,192 +1,173 @@
-  /*Aufgabe: Aufgabe 3: Events - UNO
+  /*Aufgabe: Aufgabe 5: Weihnachtsbaumkonfigurator
       Name: Verena Girrbach
       Matrikel: 
       Datum: 25.11.18
       Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
-      NOCH NICHT FUNKTIONSFÄHIG!     
+      Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.   
 */
 namespace Christmastree{
-    window.addEventListener("DOMContentLoaded", init)
 
  window.addEventListener("load", init);
 
-   let treePrice: number = 0;
-   let holderPrice: number = 0;
-   let ornamentPrice: number = 0;
-   let candlePrice: number = 0;
-   let lamettaPrice: number = 0; 
-
-  let treeInputs: HTMLInputElement[] = [];
-  let holderInputs: HTMLInputElement[] = [];
-  let decorationInputs: HTMLInputElement[] = [];
-  let lightInputs: HTMLInputElement[] = [];
-  let shippingInputs: HTMLInputElement[] = [];
-  let fieldsetBaum: HTMLElement;
-  let fieldsetHalter: HTMLElement;
-  let fieldsetDeko: HTMLElement;
-  let fieldsetLicht: HTMLElement;
-  let fieldsetVersand: HTMLElement;
-   
+    let treeboolean: boolean = false;
+    let holderboolean: boolean = false;
+    let shippingboolean: boolean = false;
+ 
 
 
-    let step: HTMLInputElement = document.createElement("input");
-
-
-    function init(_event: Event): void {
+    function init(): void {
       
-       for (let key in data) {   
-        let items:product[] = items[key];
+        displayFieldsets(data);
+        document.getElementsByTagName("body")[0].addEventListener("change", handleChange);
+        document.getElementById("check").addEventListener("click", check);
+    }
+
+
+        function displayFieldsets(_items: items): void {
+
+
+
+        for (let key in _items) {
+            //console.log(key);
+            let value: product[] = _items[key];
+            let node: Element = document.getElementsByTagName("body")[0];
+            let h2: HTMLElement = document.createElement("h2");
+            node.appendChild(h2);
+            h2.innerText = key;
+            let fieldset: HTMLFieldSetElement = document.createElement("fieldset");
+            node.appendChild(fieldset);
+            fieldset.setAttribute("name", key);
+            fieldset.setAttribute("id", key);
+
+            for (let i: number = 0; i < value.length; i++) {
+                createInnerFieldset(value[i], fieldset, key);
+            }
         }
-        
-        let fieldsets: NodeListOf<HTMLFieldSetElement> = document.getElementsById("key");
-        
+    }
+    
+    function createInnerFieldset(_heteroPredef: product, _fieldset: Element, _key: string): void {
 
-        for (let i: number = 0; i < fieldsets.length; i++) {
-            let fieldset: HTMLFieldSetElement = fieldsets[i];
-            fieldset.addEventListener("change", handleChange);
-            fieldset.addEventListener("change", showSum);
-        
-        }
-
-        fieldsetBaum = document.getElementById("tree");
-        fieldsetHalter = document.getElementById("holder");
-        fieldsetDeko = document.getElementById("decoration");
-        fieldsetLicht = document.getElementById("lights");
-        fieldsetVersand = document.getElementById("shipping");
-
-        for (let i: number = 0; i < trees.length; i++) {
-
+        if (_key == "trees" || _key == "holders" || _key == "shipping") {
+            //console.log(_fieldset.childNodes.length);
+            let forID: number = _fieldset.childNodes.length;
+            let label: HTMLElement = document.createElement("label");
+            _fieldset.appendChild(label);
+            label.setAttribute("for", _key + forID);
+            label.innerText = _heteroPredef.name;
             let input: HTMLInputElement = document.createElement("input");
-            let label: HTMLLabelElement = document.createElement("label");
-
-            input.setAttribute("type", "number");
+            label.appendChild(input);
+            input.setAttribute("price", _heteroPredef.price.toString());
+            input.setAttribute("type", "radio");
+            input.setAttribute("name", "radio" + _key);
+            input.setAttribute("id", _key + forID);
+            input.setAttribute("hiddenName", _heteroPredef.name);
+            input.setAttribute("category", _key);
+        } else {
+            let p: HTMLElement = document.createElement("p");
+            _fieldset.appendChild(p);
+            let input: HTMLInputElement = document.createElement("input");
+            _fieldset.appendChild(input);
+            input.setAttribute("price", _heteroPredef.price.toString());
             input.setAttribute("value", "0");
-            input.min = "0";
-            label.innerText = trees[i];
-            label.appendChild(input);
-            treeInputs.push(input);
-            fieldsetBaum.appendChild(label);
+            input.setAttribute("pattern", "[0-9]{1,}");
+            input.setAttribute("name", _heteroPredef.name);
+            input.setAttribute("category", _key);
+            p.innerText = _heteroPredef.name;
+        }
+    }
+      
+        function handleChange(_event: Event): void {
+        let target: HTMLInputElement = <HTMLInputElement>_event.target;
+        target.setAttribute("value", target.value);
+        if (target.name == "radiotree") {
+            treeboolean = true;
+            for (let i: number = 0; i < data["trees"].length; i++) {
+                let dom: HTMLElement = document.getElementById("trees" + i);
+                dom.setAttribute("value", "off");
+            }
+            target.setAttribute("value", "on");
+        }  
+            
+        if (target.name == "radioholder") {
+            holderboolean = true;
+            for (let i: number = 0; i < data["holders"].length; i++) {
+                let dom: HTMLElement = document.getElementById("holders" + i);
+                dom.setAttribute("value", "off");
+            }
+            target.setAttribute("value", "on");
+        }
+            
+       if (target.name == "radioshipping") {
+            shippingboolean = true;
+            for (let i: number = 0; i < data["shipping"].length; i++) {
+                let dom: HTMLElement = document.getElementById("shipping" + i);
+                dom.setAttribute("value", "off");
+            }
+            target.setAttribute("value", "on");
+        }
+            
+        let articles: NodeListOf<HTMLInputElement> = document.getElementsByTagName("input");
+        let checkout: HTMLElement = document.getElementById("checkout");
+        checkout.innerText = "";
+        for (let i: number = 0; i < articles.length; i++) {
+            let article: HTMLInputElement = articles[i];
+            let articleName: string = article.getAttribute("name");
+            if (articleName == "radiotree" || articleName == "radioholder" || articleName == "radioshipping") {
+                articleName = article.getAttribute("hiddenName");
+            }
+        
+        let articleValue: number = Number(article.getAttribute("value"));
+            let articlePrice: number = Number(article.getAttribute("price"));
+            if (articleValue > 0 || article.getAttribute("value") == "on") {
+                let articleCategory: string = article.getAttribute("category");
+                if (articleCategory == "trees" || articleCategory == "holders" || articleCategory == "shipping") {
+                    articleValue = 1;
+                }
+                let price: number = articleValue * articlePrice;
 
-            input.className = "checkbox";
+                let createArticle: HTMLElement = document.createElement("p");
+                checkout.appendChild(createArticle);
+                createArticle.setAttribute("price", price.toString());
+                createArticle.innerText = articleCategory + ": " + articleName + " x " + articleValue;
 
-            console.log(trees[i]);
+            }
+
 
         }
-
-        for (let i: number = 0; i < holders.length; i++) {
-
-            let input: HTMLInputElement = document.createElement("input");
-            let label: HTMLLabelElement = document.createElement("label");
-
-            input.setAttribute("type", "number");
-            input.setAttribute("value", "0");
-            input.min = "0";
-            label.innerText = holders[i];
-            label.appendChild(input);
-            holderInputs.push(input);
-            fieldsetHalter.appendChild(label);
-
-            input.className = "checkbox";
-
-            console.log(holders[i]);
-        }
-
-        for (let i: number = 0; i < ornaments.length; i++) {
-
-            let input: HTMLInputElement = document.createElement("input");
-            let label: HTMLLabelElement = document.createElement("label");
-
-            input.setAttribute("type", "checkbox");
-            label.innerText = ornaments[i];
-            label.appendChild(input);
-            decorationInputs.push(input);
-            fieldsetDeko.appendChild(label);
-
-            input.className = "ornaments";
-
-            console.log(ornaments[i]);
-        }
+        calcPrice();
     }
     
-    for (let i: number = 0; i < candles.length; i++) {
-
-            let input: HTMLInputElement = document.createElement("input");
-            let label: HTMLLabelElement = document.createElement("label");
-
-            input.setAttribute("type", "checkbox");
-            label.innerText = candles[i];
-            label.appendChild(input);
-            lightInputs.push(input);
-            fieldsetLicht.appendChild(label);
-
-            input.className = "candles";
-
-            console.log(candles[i]);
-        }
-    }
-
-  for (let i: number = 0; i < lametta.length; i++) {
-
-            let input: HTMLInputElement = document.createElement("input");
-            let label: HTMLLabelElement = document.createElement("label");
-
-            input.setAttribute("type", "checkbox");
-            label.innerText = lametta[i];
-            label.appendChild(input);
-            decorationInputs.push(input);
-            fieldsetDeko.appendChild(label);
-
-            input.className = "lametta";
-
-            console.log(lametta[i]);
-        }
     
-
-    function handleChange(_event: Event): void {
-        console.log(_event);
-        let order: HTMLElement = document.getElementById("productoverview");
-        order.innerText = "";
-
-        for (let i: number = 0; i < treeInputs.length; i++) {
-            if (parseInt(treeInputs[i].price) > 0) {
-                order.innerText += trees[i] + " " + ": " + (parseInt(treeInputs[i].price) * 1) + "\n";
-            }
+        function calcPrice(): void {
+        let co: HTMLElement = document.getElementById("checkout");
+        let gesPrice: number = 0;
+        for (let i: number = 0; i < co.childNodes.length; i++) {
+            let price: number = Number(document.getElementsByTagName("p")[i].getAttribute("price"));
+            gesPrice += price;
+            document.getElementById("price").innerText = gesPrice.toString();
         }
-        for (let i: number = 0; i < holderInputs.length; i++) {
-            if (parseInt(holderInputs[i].price) > 0) {
-                order.innerText += holders[i] + " " + ": " + (parseInt(holderInputs[i].price) * 1) + "\n";
-            }
-        }
-        for (let i: number = 0; i < decorationInputs.length; i++) {
-            if (decorationInputs[i].checked) {
-                order.innerText += ornaments[i] + " " + ":" + (parseInt(decorationInputs[i].price)*1) +"\n";
-            }
-        }
-        for (let i: number = 0; i < lightInputs.length; i++) {
-            if (lightInputs[i].checked) {
-                order.innerText += candles[i] + " " + ":" + (parseInt(lightInputs[i].price)*1) +"\n";
-            }
-        }
+        console.log(gesPrice);
     }
 
-    function showSum(_event: Event): void {
-        let summe: number = 0;
-
-        for (let i: number = 0; i < treeInputs.length; i++) {
-            summe += parseInt(treetInputs[i].price);
+    function check(): void {
+        let prompt: string = "Bitte noch auswaehlen:";
+        if (treeboolean == false || holderboolean == false || shippingboolean == false) {
+            if (treeboolean == false) {
+                prompt += "Baum ";
+            }
+            if (holderboolean == false) {
+                prompt += "Halter ";
+            }
+            if (shippingboolean == false) {
+                prompt += "Lieferung";
+            }
+            alert(prompt);
         }
-        for (let i: number = 0; i < holderInputs.length; i++) {
-            summe += parseInt(holderInputs[i].price);
+        else {
+            alert("Alles in Ordnung!");
         }
-        for (let i: number = 0; i < decorationInputs.length; i++) {
-            if (decorationInputs[i].checked)
-                summe += parseInt(decorationInputs[i].price);
-        }
-        console.log(summe);
-
-        document.getElementById("total").innerText = summe.toString() + " €";
 
     }
+}
 
-    
-
+       
