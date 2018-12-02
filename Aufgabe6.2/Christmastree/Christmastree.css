@@ -1,0 +1,55 @@
+/*Aufgabe: Aufgabe 5: Weihnachtsbaumkonfigurator
+      Name: Verena Girrbach
+      Matrikel: 
+      Datum: 25.11.18
+      Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+      Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.
+        
+      */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@charset "ISO-8859-1";
+
+html{
+	background-image: url("imgs/background.jpg");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	margin-top: -100px;
+	
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1{
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
+	margin-top: 280px;
+	font-size: 75px;
+	color:#9F8329;
+	margin-left: -50px;
+	
+}
+
+#priceMain{
+	font-size: 30px;
+	text-align: center;
+	box-shadow: 0.5;
+		
+}
+#checkout{
+	font-size:30px;
+}
+
+#check{
+	background-color:#9F8329;
+	border-radius: 0.2em;
+	border: none;
+	margin-left: 580px;
+	height: 30px;
+	font-size: 20px;
+	
+}
+body{
+	font-size: 20px;
+	margin-left: 10px;
+}
