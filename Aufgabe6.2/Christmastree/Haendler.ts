@@ -9,7 +9,7 @@ namespace Christmastree{
        [key: string]:product[];
        }
     
-    export let data : items
+    export let data : items 
        ={
              "trees": [
                 {name:"Nordmanntanne", price: 34.95 },
