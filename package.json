@@ -8,7 +8,7 @@
 		"start": "EIA2/Aufgabe6/Server/server.js"
 	},
 	"engines": {
-		"node": "8.10.0"
+		"node": "4.6.1"
 	},
 	"dependencies": {}
 }
