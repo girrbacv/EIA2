@@ -1,17 +1,17 @@
 namespace Christmastree{
     
-     export interface product{
+    export interface product{
         name: string;
-        price: number;
-     }
+        price: string;
+    }
     
     export interface items{
-       [key: string]:product[];
-       }
+        [key: string]:product[];
+        }
     
-    export let data : items 
-       ={
-             "trees": [
+    export let data : items
+    ={
+            "trees": [
                 {name:"Nordmanntanne", price: 34.95 },
                 {name:"Rotfichte" , price:29.90},
                 {name:"Blaufichte", price:29.90},
@@ -44,6 +44,6 @@ namespace Christmastree{
                 {name:"Expressversand (1-3 Werktage)", price:5.99}
                 ]
               
-            
-    };
- }
+              };
+    
+}
