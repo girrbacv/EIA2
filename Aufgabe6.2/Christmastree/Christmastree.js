@@ -18,10 +18,10 @@ var Christmastree;
         document.getElementById("check").addEventListener("click", check);
     }
     function displayFieldsets(_items) {
-        let node = document.createElement("node");
-        node.setAttribute("action", "https://girrbacv.herokuapp.com/hallo");
-        node.setAttribute("method", "get");
-        document.getElementsByTagName("body")[0].appendChild(node);
+        let heroku = document.createElement("heroku");
+        heroku.setAttribute("action", "https://girrbacv.herokuapp.com/hallo");
+        heroku.setAttribute("method", "get");
+        document.getElementsByTagName("body")[0].appendChild(heroku);
         for (let key in _items) {
             //console.log(key);
             let value = _items[key];
