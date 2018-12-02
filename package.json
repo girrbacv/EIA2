@@ -3,9 +3,9 @@
 	"version": "1.0.0",
 	"description": "Minimal server just bouncing the URL",
 	"author": "Verena",
-	"main": "Server.js",
+	"main": "server.js",
 	"scripts": {
-		"start": "node L06_SendData/Server/Server.js"
+		"start": "EIA2/Aufgabe6/server.js"
 	},
 	"engines": {
 		"node": "8.10.0"
