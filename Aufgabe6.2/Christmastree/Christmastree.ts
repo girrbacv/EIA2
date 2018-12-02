@@ -1,7 +1,7 @@
-  /*Aufgabe: Aufgabe 5: Weihnachtsbaumkonfigurator
+  /*Aufgabe: Aufgabe 6: Heroku
       Name: Verena Girrbach
       Matrikel: 
-      Datum: 25.11.18
+      Datum: 2.12.18
       Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
       Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.   
 */
