@@ -5,7 +5,7 @@
 	"author": "Verena",
 	"main": "server.js",
 	"scripts": {
-		"start": "EIA2/Aufgabe6/server.js"
+		"start": "EIA2/Aufgabe6/Server/server.js"
 	},
 	"engines": {
 		"node": "8.10.0"
