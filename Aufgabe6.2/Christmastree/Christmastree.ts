@@ -24,7 +24,7 @@ namespace Christmastree{
         function displayFieldsets(_items: items): void {
 
         let node: HTMLElement= document.createElement("node");
-        node.setAttribute("action","https://girrbacv.herokuapp.com/");
+        node.setAttribute("action","https://girrbacv.herokuapp.com");
         node.setAttribute("method","get");
         document.getElementsByTagName("body")[0].appendChild(node);
 
@@ -45,6 +45,12 @@ namespace Christmastree{
                 createInnerFieldset(value[i], fieldset, key);
             }
         }
+       let h2: HTMLElement = document.createElement("h2");
+        node.appendChild(h2);
+        h2.innerHTML = "Anschrift";
+        let div: HTMLElement = document.createElement("div");
+        node.appendChild(div);
+        node.innerHTML += "<button type=submit>Submit</button>";
     }
     
     function createInnerFieldset(_heteroPredef: product, _fieldset: Element, _key: string): void {

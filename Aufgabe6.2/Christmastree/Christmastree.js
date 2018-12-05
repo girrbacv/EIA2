@@ -15,7 +15,7 @@ var Christmastree;
     }
     function displayFieldsets(_items) {
         let node = document.createElement("node");
-        node.setAttribute("action", "https://girrbacv.herokuapp.com/");
+        node.setAttribute("action", "https://girrbacv.herokuapp.com");
         node.setAttribute("method", "get");
         document.getElementsByTagName("body")[0].appendChild(node);
         for (let key in _items) {
@@ -33,6 +33,12 @@ var Christmastree;
                 createInnerFieldset(value[i], fieldset, key);
             }
         }
+        let h2 = document.createElement("h2");
+        node.appendChild(h2);
+        h2.innerHTML = "Anschrift";
+        let div = document.createElement("div");
+        node.appendChild(div);
+        node.innerHTML += "<button type=submit>Submit</button>";
     }
     function createInnerFieldset(_heteroPredef, _fieldset, _key) {
         if (_key == "trees" || _key == "holders" || _key == "shipping") {
