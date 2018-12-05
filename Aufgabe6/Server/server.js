@@ -1,5 +1,6 @@
 "use strict";
 const Http = require("http");
+const Url = require("url");
 var L06_SendData;
 (function (L06_SendData) {
     console.log("Starting server");
@@ -19,6 +20,14 @@ var L06_SendData;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.write(_request.url);
         console.log(_request.url);
+        //Aufgabe 7
+        let url = Url.parse(_request.url, true).query;
+        console.log(url);
+        for (let key in url) {
+            console.log(url[key]);
+            console.log(key);
+            _response.write(key + " = " + url[key] + "<br>");
+        }
         _response.end();
     }
 })(L06_SendData || (L06_SendData = {}));
