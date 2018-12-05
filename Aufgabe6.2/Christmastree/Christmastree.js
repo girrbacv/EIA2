@@ -1,25 +1,21 @@
-/*Aufgabe: Aufgabe 6: Heroku
+/*Aufgabe: Aufgabe 5: Weihnachtsbaumkonfigurator
     Name: Verena Girrbach
     Matrikel:
-    Datum: 2.12.18
+    Datum: 25.11.18
     Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
     Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.
 */
 var Christmastree;
 (function (Christmastree) {
     window.addEventListener("load", init);
-    let treeboolean = false;
-    let holderboolean = false;
-    let shippingboolean = false;
     function init() {
-        console.log("start");
         displayFieldsets(Christmastree.data);
         document.getElementsByTagName("body")[0].addEventListener("change", handleChange);
         document.getElementById("check").addEventListener("click", check);
     }
     function displayFieldsets(_items) {
         let node = document.createElement("node");
-        node.setAttribute("action", "https://girrbacv.herokuapp.com/hallo");
+        node.setAttribute("action", "https://girrbacv.herokuapp.com");
         node.setAttribute("method", "get");
         document.getElementsByTagName("body")[0].appendChild(node);
         for (let key in _items) {
@@ -40,7 +36,7 @@ var Christmastree;
     }
     function createInnerFieldset(_heteroPredef, _fieldset, _key) {
         if (_key == "trees" || _key == "holders" || _key == "shipping") {
-            //console.log(_fieldset.childNodes.length);
+            console.log(_fieldset.childNodes.length);
             let forID = _fieldset.childNodes.length;
             let label = document.createElement("label");
             _fieldset.appendChild(label);
@@ -130,6 +126,9 @@ var Christmastree;
         }
         console.log(gesPrice);
     }
+    let treeboolean = true;
+    let holderboolean = true;
+    let shippingboolean = true;
     function check() {
         let prompt = "Bitte noch auswaehlen:";
         if (treeboolean == false || holderboolean == false || shippingboolean == false) {

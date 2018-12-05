@@ -1,17 +1,17 @@
 namespace Christmastree{
     
-    export interface product{
+     export interface product{
         name: string;
-        price: string;
-    }
+        price: number;
+     }
     
     export interface items{
-        [key: string]:product[];
-        }
+       [key: string]:product[];
+       }
     
     export let data : items
-    ={
-            "trees": [
+       ={
+             "trees": [
                 {name:"Nordmanntanne", price: 34.95 },
                 {name:"Rotfichte" , price:29.90},
                 {name:"Blaufichte", price:29.90},
@@ -21,6 +21,10 @@ namespace Christmastree{
                 {name:"Plastic", price:29.99},
                 {name:"Wood", price:49.99}
                ],
+             "shipping":[
+                {name:"DHL Standard Lieferung (3-7 Werktage)", price:0.00},
+                {name:"Expressversand (1-3 Werktage)", price:5.99}
+                ],
               "ornaments":[
                 {name:"Glaskugel rot", price:1.54},
                 {name:"Glaskugel grün", price:1.54},
@@ -38,12 +42,9 @@ namespace Christmastree{
               "lametta":[
                 {name:"Lametta silber", price:1.49},
                 {name:"Lametta gold", price:1.49}
-                ],
-              "shipping":[
-                {name:"DHL Standard Lieferung (3-7 Werktage)", price:0.00},
-                {name:"Expressversand (1-3 Werktage)", price:5.99}
                 ]
+             
               
-              };
-    
-}
+            
+    };
+ }
