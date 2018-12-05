@@ -91,8 +91,8 @@ var Christmastree;
             target.setAttribute("value", "on");
         }
         let articles = document.getElementsByTagName("input");
-        let check = document.getElementById("check");
-        check.innerText = "";
+        let checkout = document.getElementById("checkout");
+        checkout.innerText = "";
         for (let i = 0; i < articles.length; i++) {
             let article = articles[i];
             let articleName = article.getAttribute("name");
@@ -108,7 +108,7 @@ var Christmastree;
                 }
                 let price = articleValue * articlePrice;
                 let createArticle = document.createElement("p");
-                check.appendChild(createArticle);
+                checkout.appendChild(createArticle);
                 createArticle.setAttribute("price", price.toString());
                 createArticle.innerText = articleCategory + ": " + articleName + " x " + articleValue;
             }
@@ -116,7 +116,7 @@ var Christmastree;
         calcPrice();
     }
     function calcPrice() {
-        let co = document.getElementById("check");
+        let co = document.getElementById("checkout");
         let gesPrice = 0;
         for (let i = 0; i < co.childNodes.length; i++) {
             let price = Number(document.getElementsByTagName("p")[i].getAttribute("price"));

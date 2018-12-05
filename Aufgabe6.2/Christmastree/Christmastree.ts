@@ -106,8 +106,8 @@ namespace Christmastree{
         }
             
         let articles: NodeListOf<HTMLInputElement> = document.getElementsByTagName("input");
-        let checkout: HTMLElement = document.getElementById("checkout");
-        checkout.innerText = "";
+        let check: HTMLElement = document.getElementById("check");
+        check.innerText = "";
         for (let i: number = 0; i < articles.length; i++) {
             let article: HTMLInputElement = articles[i];
             let articleName: string = article.getAttribute("name");
@@ -125,7 +125,7 @@ namespace Christmastree{
                 let price: number = articleValue * articlePrice;
 
                 let createArticle: HTMLElement = document.createElement("p");
-                checkout.appendChild(createArticle);
+                check.appendChild(createArticle);
                 createArticle.setAttribute("price", price.toString());
                 createArticle.innerText = articleCategory + ": " + articleName + " x " + articleValue;
 
@@ -138,7 +138,7 @@ namespace Christmastree{
     
     
         function calcPrice(): void {
-        let co: HTMLElement = document.getElementById("checkout");
+        let co: HTMLElement = document.getElementById("check");
         let gesPrice: number = 0;
         for (let i: number = 0; i < co.childNodes.length; i++) {
             let price: number = Number(document.getElementsByTagName("p")[i].getAttribute("price"));
