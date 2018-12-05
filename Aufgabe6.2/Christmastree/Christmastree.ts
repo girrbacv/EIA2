@@ -24,7 +24,7 @@ namespace Christmastree{
         function displayFieldsets(_items: items): void {
 
         let node: HTMLElement= document.createElement("node");
-        node.setAttribute("action","https://girrbacv.herokuapp.com");
+        node.setAttribute("action","https://girrbacv.herokuapp.com/");
         node.setAttribute("method","get");
         document.getElementsByTagName("body")[0].appendChild(node);
 

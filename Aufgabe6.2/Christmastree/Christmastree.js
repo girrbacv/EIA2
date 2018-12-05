@@ -15,7 +15,7 @@ var Christmastree;
     }
     function displayFieldsets(_items) {
         let node = document.createElement("node");
-        node.setAttribute("action", "https://girrbacv.herokuapp.com");
+        node.setAttribute("action", "https://girrbacv.herokuapp.com/");
         node.setAttribute("method", "get");
         document.getElementsByTagName("body")[0].appendChild(node);
         for (let key in _items) {
