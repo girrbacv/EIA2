@@ -5,7 +5,7 @@
       Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
       Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.   
 */
-namespace Christmastree{
+namespace Christmastree2{
 
  window.addEventListener("load", init);
 
@@ -16,7 +16,7 @@ namespace Christmastree{
     function init(): void {
       
         displayFieldsets(data);
-        document.getElementsByTagName("body")[0].addEventListener("change", handleChange);
+        document.getElementById("fieldsets").addEventListener("change", handleChange);
         document.getElementById("check").addEventListener("click", check);
     }
 
@@ -28,7 +28,7 @@ namespace Christmastree{
         for (let key in _items) {
             //console.log(key);
             let value: product[] = _items[key];
-            let node: Element = document.getElementsByTagName("body")[0];
+            let node: Element = document.getElementById("fieldsets");
             let h2: HTMLElement = document.createElement("h2");
             node.appendChild(h2);
             h2.innerText = key;

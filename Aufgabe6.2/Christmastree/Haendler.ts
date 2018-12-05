@@ -1,4 +1,4 @@
-namespace Christmastree{
+namespace Christmastree2{
     
      export interface product{
         name: string;
