@@ -1,6 +1,6 @@
-var Christmastree1;
-(function (Christmastree1) {
-    Christmastree1.data = {
+var Christmastree3;
+(function (Christmastree3) {
+    Christmastree3.data = {
         "trees": [
             { name: "Nordmanntanne", price: 34.95 },
             { name: "Rotfichte", price: 29.90 },
@@ -10,6 +10,10 @@ var Christmastree1;
         "holders": [
             { name: "Plastic", price: 29.99 },
             { name: "Wood", price: 49.99 }
+        ],
+        "shipping": [
+            { name: "DHL Standard Lieferung (3-7 Werktage)", price: 0.00 },
+            { name: "Expressversand (1-3 Werktage)", price: 5.99 }
         ],
         "ornaments": [
             { name: "Glaskugel rot", price: 1.54 },
@@ -28,11 +32,7 @@ var Christmastree1;
         "lametta": [
             { name: "Lametta silber", price: 1.49 },
             { name: "Lametta gold", price: 1.49 }
-        ],
-        "shipping": [
-            { name: "DHL Standard Lieferung (3-7 Werktage)", price: 0.00 },
-            { name: "Expressversand (1-3 Werktage)", price: 5.99 }
         ]
     };
-})(Christmastree1 || (Christmastree1 = {}));
+})(Christmastree3 || (Christmastree3 = {}));
 //# sourceMappingURL=Haendler.js.map

@@ -5,32 +5,30 @@
       Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
       Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.   
 */
-namespace Christmastree1{
+namespace Christmastree3{
 
  window.addEventListener("load", init);
 
-    let treeboolean: boolean = false;
-    let holderboolean: boolean = false;
-    let shippingboolean: boolean = false;
+
  
 
 
     function init(): void {
       
         displayFieldsets(data);
-        document.getElementsByTagName("body")[0].addEventListener("change", handleChange);
+        document.getElementById("fieldsets").addEventListener("change", handleChange);
         document.getElementById("check").addEventListener("click", check);
     }
 
 
         function displayFieldsets(_items: items): void {
 
-
+        
 
         for (let key in _items) {
             //console.log(key);
             let value: product[] = _items[key];
-            let node: Element = document.getElementsByTagName("body")[0];
+            let node: Element = document.getElementById("fieldsets");
             let h2: HTMLElement = document.createElement("h2");
             node.appendChild(h2);
             h2.innerText = key;
@@ -43,12 +41,13 @@ namespace Christmastree1{
                 createInnerFieldset(value[i], fieldset, key);
             }
         }
+   
     }
     
     function createInnerFieldset(_heteroPredef: product, _fieldset: Element, _key: string): void {
 
         if (_key == "trees" || _key == "holders" || _key == "shipping") {
-            //console.log(_fieldset.childNodes.length);
+            console.log(_fieldset.childNodes.length);
             let forID: number = _fieldset.childNodes.length;
             let label: HTMLElement = document.createElement("label");
             _fieldset.appendChild(label);
@@ -148,7 +147,10 @@ namespace Christmastree1{
         }
         console.log(gesPrice);
     }
-
+    let treeboolean: boolean = true;
+    let holderboolean: boolean = true;
+    let shippingboolean: boolean = true;
+    
     function check(): void {
         let prompt: string = "Bitte noch auswaehlen:";
         if (treeboolean == false || holderboolean == false || shippingboolean == false) {

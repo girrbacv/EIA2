@@ -5,14 +5,14 @@
     Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
     Dieser Code wurde in Zusammenarbeit mit Katja Ljubas erstellt.
 */
-var Christmastree;
-(function (Christmastree) {
+var Christmastree1;
+(function (Christmastree1) {
     window.addEventListener("load", init);
     let treeboolean = false;
     let holderboolean = false;
     let shippingboolean = false;
     function init() {
-        displayFieldsets(Christmastree.data);
+        displayFieldsets(Christmastree1.data);
         document.getElementsByTagName("body")[0].addEventListener("change", handleChange);
         document.getElementById("check").addEventListener("click", check);
     }
@@ -68,7 +68,7 @@ var Christmastree;
         target.setAttribute("value", target.value);
         if (target.name == "radiotree") {
             treeboolean = true;
-            for (let i = 0; i < Christmastree.data["trees"].length; i++) {
+            for (let i = 0; i < Christmastree1.data["trees"].length; i++) {
                 let dom = document.getElementById("trees" + i);
                 dom.setAttribute("value", "off");
             }
@@ -76,7 +76,7 @@ var Christmastree;
         }
         if (target.name == "radioholder") {
             holderboolean = true;
-            for (let i = 0; i < Christmastree.data["holders"].length; i++) {
+            for (let i = 0; i < Christmastree1.data["holders"].length; i++) {
                 let dom = document.getElementById("holders" + i);
                 dom.setAttribute("value", "off");
             }
@@ -84,7 +84,7 @@ var Christmastree;
         }
         if (target.name == "radioshipping") {
             shippingboolean = true;
-            for (let i = 0; i < Christmastree.data["shipping"].length; i++) {
+            for (let i = 0; i < Christmastree1.data["shipping"].length; i++) {
                 let dom = document.getElementById("shipping" + i);
                 dom.setAttribute("value", "off");
             }
@@ -143,5 +143,5 @@ var Christmastree;
             alert("Alles in Ordnung!");
         }
     }
-})(Christmastree || (Christmastree = {}));
+})(Christmastree1 || (Christmastree1 = {}));
 //# sourceMappingURL=Christmastree.js.map

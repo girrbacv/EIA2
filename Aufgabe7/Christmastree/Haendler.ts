@@ -1,4 +1,4 @@
-namespace Christmastree1{
+namespace Christmastree3{
     
      export interface product{
         name: string;
@@ -21,6 +21,10 @@ namespace Christmastree1{
                 {name:"Plastic", price:29.99},
                 {name:"Wood", price:49.99}
                ],
+             "shipping":[
+                {name:"DHL Standard Lieferung (3-7 Werktage)", price:0.00},
+                {name:"Expressversand (1-3 Werktage)", price:5.99}
+                ],
               "ornaments":[
                 {name:"Glaskugel rot", price:1.54},
                 {name:"Glaskugel grün", price:1.54},
@@ -38,11 +42,8 @@ namespace Christmastree1{
               "lametta":[
                 {name:"Lametta silber", price:1.49},
                 {name:"Lametta gold", price:1.49}
-                ],
-              "shipping":[
-                {name:"DHL Standard Lieferung (3-7 Werktage)", price:0.00},
-                {name:"Expressversand (1-3 Werktage)", price:5.99}
                 ]
+             
               
             
     };
