@@ -9,14 +9,10 @@ namespace L06_SendData {
     
        function setupAsyncForm(): void {
         let button: Element = document.querySelector("[type=button]");
-        button.addEventListener("click", handleClickOnAsync);
+        button.addEventListener("click", sendRequestWithCustomData);
     }
 
-    function handleClickOnAsync(_event: Event): void {
-        let color: string = (<HTMLInputElement>document.querySelector(":checked")).value;
-        sendRequestWithCustomData(color);
-    }
-
+    
     
     function sendRequestWithCustomData(_color: string): void {
         let xhr: XMLHttpRequest = new XMLHttpRequest();
