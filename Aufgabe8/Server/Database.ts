@@ -45,7 +45,7 @@ function handleInsert(_e: Mongo.MongoError): void {
 //function "find" for Matrikelnummer
 export function find(_matrikel: matrikelData, _callback: Function): void{
     console.log(_matrikel);
-    var cursor: Mongo.Cursor = students.find();
+    var cursor: Mongo.Cursor = students.find(_matrikel);
     cursor.toArray(prepareAnswer);
     
 

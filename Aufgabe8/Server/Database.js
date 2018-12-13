@@ -39,7 +39,7 @@ function handleInsert(_e) {
 //function "find" for Matrikelnummer
 function find(_matrikel, _callback) {
     console.log(_matrikel);
-    var cursor = students.find();
+    var cursor = students.find(_matrikel);
     cursor.toArray(prepareAnswer);
     function prepareAnswer(_e, studentArray) {
         if (_e)
