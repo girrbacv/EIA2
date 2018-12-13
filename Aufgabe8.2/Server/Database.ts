@@ -14,7 +14,7 @@ let students: Mongo.Collection;
 if (process.env.NODE_ENV == "production") {
     //    databaseURL = "mongodb://username:password@hostname:port/database";
     databaseURL = "mongodb://testuser:testpassword@ds129532.mlab.com:29532/eia2";
-    databaseName = "eia2";
+    databaseName = "eia2";  
 }
 
 // try to connect to database, then activate callback "handleConnect" 
