@@ -1,6 +1,77 @@
-* {
+ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+*{
 	display: block;
 	vertical-align: top
+}
+html{
+	background-color:#e6fff7;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 40px;
+}
+#name{
+	background-color:#e6fff7;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	border-radius:50px;
+	border:solid thin black;
+	margin-left: 75px;
+}
+#firstname{
+	background-color:#e6fff7;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	border-radius:50px;
+	border:solid thin black;
+	margin-left: 75px;	
+	margin-top: 5px;
+}
+#matrikel{
+	background-color:#e6fff7;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	border-radius:50px;
+	border:solid thin black;
+	margin-left: 75px;
+	margin-top: 5px;
+}
+
+#insert{
+	background-color:white;
+	color: black;
+	border: solid thin black;
+	margin-top: 20px;
+	font-size: 20px;
+	font-family:'Open Sans Condensed', sans-serif;
+	margin-left: 75px;
+	
+}
+#refresh{
+	background-color:white;
+	color: black;
+	border: solid thin black;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-family:'Open Sans Condensed', sans-serif;	
+}
+#number{
+	background-color:#e6fff7;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	border-radius:50px;
+	border:solid thin black;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#find{
+	background-color:white;
+	color: black;
+	border: solid thin black;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-family:'Open Sans Condensed', sans-serif;	
+	
 }
 
 head {
@@ -8,5 +79,6 @@ head {
 }
 
 fieldset {
-	width: 300px;
+	max-width: 600px;
+	
 }
