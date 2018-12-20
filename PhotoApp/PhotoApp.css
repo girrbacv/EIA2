@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC');
+
+
+
+html{
+	background-color:#ccc8c8;
+}
+h1{
+	position:inline;
+	margin-left:800px;
+	
+}
+#Logo{
+	position:center;
+	max-width: 50px;
+	max-height: 50px;
+	margin-left:1000px;
+}
+h1{
+	font-family: 'Noto Serif TC', serif;
+}
+
+
+
+
+
+
+
+  
