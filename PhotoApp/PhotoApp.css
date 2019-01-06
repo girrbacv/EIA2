@@ -3,22 +3,124 @@
 
 
 html{
+	background-color:white;
+}
+
+#box1{
 	background-color:#ccc8c8;
+	min-width:100%;
+	height:150px;
+	margin-top: -25px;
+	margin-left:-15px;
+	margin-right: -10px;
+	margin-bottom: 60px;
+	
+	
+}
+
+
+#Pfeil{
+	max-width: 80px;
+	position:inline;
+	margin-top: 20px;
+	margin-left: 20px;
+	
 }
 h1{
 	position:inline;
-	margin-left:800px;
+	margin-left:430px;
+	margin-top:-50px;
+	font-family: 'Noto Serif TC', serif;
+	
 	
 }
-#Logo{
-	position:center;
-	max-width: 50px;
-	max-height: 50px;
-	margin-left:1000px;
+
+#box2{
+	background-color:#ccc8c8;
+	min-width:100%;
+	height:150px;
+	margin-top: 450px;
+	margin-left:-15px;
+	margin-right: -15px;
+	margin-bottom: -100px;
+	
 }
-h1{
-	font-family: 'Noto Serif TC', serif;
+#Galerie{
+	margin-left: 500px;
+	max-height: 100px;
+	margin-top: 20px;
+	
 }
+#Foto1{
+	margin-left:15px;
+	max-height: 100px;
+	min-width: 120px;
+	margin-top:8px;
+	border:solid thick black;
+	float: left;
+	
+	
+	
+}
+
+#Foto2{
+	margin-left: 15px;
+	margin-top: 8px;
+	max-height: 100px;
+	min-width: 120px;
+	position: inline;
+	float: left;
+	border:solid thick black;
+	
+}
+
+#Foto3{
+	margin-left: 15px;
+	margin-top: 8px;
+	min-height: 100px;
+	max-width: 120px;
+	position: inline;
+	float: left;
+	border:solid thick black;
+	
+}
+
+#Foto4{
+	margin-left: 15px;
+	margin-top: 15px;
+	min-height: 100px;
+	max-width: 120px;
+	position: inline;
+	float: left;
+	border:solid thick black;
+	
+	
+}
+
+#Foto5{
+	margin-left: 15px;
+	margin-top: 15px;
+	max-height: 100px;
+	min-width: 120px;
+	position: inline;
+	float: left;
+	border:solid thick black;
+	
+}
+
+#Foto6{
+	margin-left: 15px;
+	margin-top: 15px;
+	min-height: 100px;
+	max-width: 120px;
+	position: inline;
+	float: left;
+	border:solid thick black;
+	
+}
+
+
+
 
 
 
