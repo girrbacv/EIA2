@@ -154,6 +154,7 @@ var Aufgabe9;
         crc2.stroke();
     }
     function createPeople() {
+        //Schlittenfahrer 
         crc2.beginPath();
         crc2.arc(348, 457, 25, 0, 2 * Math.PI, false);
         crc2.fillStyle = "#F7BE81";
@@ -161,7 +162,7 @@ var Aufgabe9;
         crc2.lineWidth = 1.2;
         crc2.strokeStyle = "#A57658";
         crc2.stroke();
-        crc2.fillStyle = "red";
+        crc2.fillStyle = "#8A0808";
         crc2.fillRect(338, 480, 20, 30);
         crc2.fillRect(328, 495, 40, 65);
         crc2.fillRect(300, 520, 60, 15);
@@ -172,9 +173,34 @@ var Aufgabe9;
         crc2.beginPath();
         crc2.moveTo(370, 550);
         crc2.lineTo(250, 620);
-        crc2.lineWidth = 17;
-        crc2.strokeStyle = "green";
+        crc2.lineWidth = 20;
+        crc2.strokeStyle = "#0B243B";
         crc2.stroke();
+        // Person stehend
+        crc2.beginPath();
+        crc2.arc(548, 257, 25, 0, 2 * Math.PI, false);
+        crc2.fillStyle = "#F7BE81";
+        crc2.fill();
+        crc2.lineWidth = 1.2;
+        crc2.strokeStyle = "#A57658";
+        crc2.stroke();
+        crc2.fillStyle = "#FA5858";
+        crc2.fillRect(538, 280, 20, 30);
+        crc2.fillRect(528, 295, 40, 65);
+        crc2.fillRect(500, 310, 60, 15);
+        crc2.fillRect(540, 310, 60, 15);
+        crc2.beginPath();
+        crc2.arc(497, 317, 6, 0, 2 * Math.PI, false);
+        crc2.fillStyle = "#F7BE81";
+        crc2.fill();
+        crc2.beginPath();
+        crc2.arc(603, 317, 6, 0, 2 * Math.PI, false);
+        crc2.fillStyle = "#F7BE81";
+        crc2.fill();
+        crc2.fillStyle = "#6E6E6E";
+        crc2.fillRect(528, 350, 17, 75);
+        crc2.fillRect(552, 350, 17, 75);
+        crc2.fillRect(528, 350, 41, 12);
     }
 })(Aufgabe9 || (Aufgabe9 = {}));
 //# sourceMappingURL=Aufgabe9.js.map
