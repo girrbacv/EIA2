@@ -7,10 +7,11 @@ namespace Aufgabe9 {
         let canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
 
-    createTrees();
-   // createSun();
+   
     createSky();
     createCloud();
+    createTrees();
+    createSun();
     createSnow();
     createSleigh();
     createPeople();
@@ -142,6 +143,17 @@ namespace Aufgabe9 {
         crc2.fill();
          
     }
+    
+    //Sonne
+    
+    function createSun(): void{
+       crc2.beginPath();
+    crc2.arc(65, 70, 50, 0, 2*Math.PI);
+    crc2.fillStyle = "#ffd700";
+    crc2.fill(); 
+        
+        
+        }
     
     //Schneeflocken
     function createSnow(): void {
