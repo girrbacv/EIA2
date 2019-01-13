@@ -1,8 +1,21 @@
-namespace Aufgabe9 {
-   window.addEventListener("load", init);
-    let crc2: CanvasRenderingContext2D;
+namespace Aufgabe10{
+    
+  window.addEventListener("load", init);
+ export let crc2: CanvasRenderingContext2D;
 
 
+    let snowflakes: Snow[] = [];
+    let kidDown: Down[] = [];
+    let kidUp: Up[] = [];
+   
+    
+    
+    
+    
+    let fps: number = 25;
+
+    let imgData: ImageData;
+    
     function init(_event: Event): void {
         let canvas: HTMLCanvasElement = document.getElementsByTagName("canvas")[0];
         crc2 = canvas.getContext("2d");
@@ -12,12 +25,49 @@ namespace Aufgabe9 {
     createCloud();
     createTrees();
     createSun();
+         
    
-    createSleigh();
-    createPeople();
-            console.log("Canvas started");
+    //createSleigh();
+    //createPeople();
+        
+   
+        imgData = crc2.getImageData(0, 0, 700, 1100);
+        generateSnow();
+        generateKidDown();
+        generateChildUp();
+
+        update();
+
+           
     }
    
+function update(): void {
+        crc2.putImageData(imgData, 0, 0);
+        window.setTimeout(update, 1000 / fps);
+
+
+
+        for (let i: number = 0; i < snowflakes.length; i++) {
+            let snowflake: Snow = snowflakes[i];
+            snowflake.move();
+            snowflake.draw();
+
+
+        }
+     for (let i: number = 0; i < kidDown.length; i++) {
+            let child: Down = kidDown[i];
+            child.move();
+            child.draw();
+
+        }
+
+        for (let i: number = 0; i < Up.length; i++) {
+            let kidU: Up = kidUp[i];
+            kidU.move();
+            kidU.draw();
+        }
+
+    }
 
     
  
@@ -27,8 +77,8 @@ namespace Aufgabe9 {
  
     function createSky(): void {
         crc2.beginPath();
-        crc2.lineTo(0, 600);
-        crc2.lineTo(1100, 0);
+        crc2.lineTo(0, 670);
+        crc2.lineTo(1300, 0);
         crc2.lineTo(0, 0);
         crc2.lineTo(0, 0);
         crc2.closePath();
@@ -86,20 +136,38 @@ namespace Aufgabe9 {
          crc2.fillStyle = "#0B3B24";
          crc2.fill();
          
+         //
+           crc2.fillStyle = "#8b5a2b";
+         crc2.fillRect(410, 655, 25, 45);
+         crc2.beginPath();
+         crc2.moveTo(425, 550);
+         crc2.lineTo(475, 660);
+         crc2.lineTo(375, 660);
+         crc2.closePath();
+         crc2.fillStyle = "#0B3B24";
+         crc2.fill();
+         crc2.beginPath();
+         crc2.moveTo(425, 530);
+         crc2.lineTo(475, 630);
+         crc2.lineTo(375, 630);
+         crc2.closePath();
+         crc2.fillStyle = "#0B3B24";
+         crc2.fill();
+         
          // 2. Baum
         crc2.fillStyle = "#8b5a2b";
-        crc2.fillRect(785, 455, 25, 45);
+        crc2.fillRect(385, 755, 25, 45);
         crc2.beginPath();
-        crc2.moveTo(800, 350);
-        crc2.lineTo(850, 460);
-        crc2.lineTo(750, 460);
+        crc2.moveTo(400, 650);
+        crc2.lineTo(450, 760);
+        crc2.lineTo(350, 760);
         crc2.closePath();
         crc2.fillStyle = "#0B3B24";
         crc2.fill();
         crc2.beginPath();
-        crc2.moveTo(800, 320);
-        crc2.lineTo(850, 430);
-        crc2.lineTo(750, 430);
+        crc2.moveTo(400, 620);
+        crc2.lineTo(450, 730);
+        crc2.lineTo(350, 730);
         crc2.closePath();
         crc2.fillStyle = "#0B3B24";
         crc2.fill();
@@ -107,27 +175,25 @@ namespace Aufgabe9 {
          // 3.Baum
          
         crc2.fillStyle = "#8b5a2b";
-        crc2.fillRect(685, 555, 25, 45);
+        crc2.fillRect(485, 755, 25, 45);
         crc2.beginPath();
-        crc2.moveTo(700, 450);
-        crc2.lineTo(750, 560);
-        crc2.lineTo(650, 560);
+        crc2.moveTo(500, 650);
+        crc2.lineTo(550, 760);
+        crc2.lineTo(450, 760);
         crc2.closePath();
         crc2.fillStyle = "#0B3B24";
         crc2.fill();
         crc2.beginPath();
-        crc2.moveTo(700, 420);
-        crc2.lineTo(750, 530);
-        crc2.lineTo(650, 530);
+        crc2.moveTo(500, 620);
+        crc2.lineTo(550, 730);
+        crc2.lineTo(450, 730);
         crc2.closePath();
         crc2.fillStyle = "#0B3B24";
         crc2.fill();
             
          
         // 4. Baum
-     
-         
-       crc2.fillStyle = "#8b5a2b";
+        crc2.fillStyle = "#8b5a2b";
         crc2.fillRect(285, 755, 25, 45);
         crc2.beginPath();
         crc2.moveTo(300, 650);
@@ -139,11 +205,12 @@ namespace Aufgabe9 {
         crc2.beginPath();
         crc2.moveTo(300, 620);
         crc2.lineTo(350, 730);
-        crc2.lineTo(350, 730);
+        crc2.lineTo(250, 730);
         crc2.closePath();
         crc2.fillStyle = "#0B3B24";
         crc2.fill();
-         }
+         
+    }
     
     //Sonne
     
@@ -157,20 +224,20 @@ namespace Aufgabe9 {
         }
     
     //Schneeflocken
-    function createSnow(): void {
-        for (let i: number = 0; i < 100; i++) {
-            let x: number = Math.random() * crc2.canvas.width;
-            let y: number = Math.random() * crc2.canvas.height;
-            let size: number = (Math.random() * 5) + 2
-            crc2.beginPath();
-            crc2.arc(x, y, size, 0, 2 * Math.PI);
-            crc2.fillStyle = "white";
-            crc2.fill();
-            crc2.strokeStyle = "lightgrey";
-            crc2.stroke();
+   function generateSnow(): void {
+
+        for (let i: number = 0; i < 700; i++) {
+            let snowflake: Snow = new Snow();
+            snowflake.x = Math.random() * 600;
+            snowflake.y = Math.random() * 1100;
+            
+            snowflake.draw();
+
+            snowflakes.push(snowflake);
+
         }
+
     }
-      
     
     //Schlitten
     
@@ -268,23 +335,33 @@ namespace Aufgabe9 {
         crc2.fillRect(528, 350, 41, 12);
       }
     
-    
-    
-    
+    function generateKidDown() : void{
+         for (let i: number = 0; i < 5; i++) {
+            let child: Down = new Down();
+            child.x = Math.random() * 100;
+            child.y = Math.random() * 250 + 400;
+            child.draw();
+
+            kidDown.push(child);
+        }
     }
     
+    function generateChildUp(): void {
+
+        for (let i: number = 0; i < 5; i++) {
+            let kidU: Up = new Up();
+            kidU.x = Math.random() * 100 + 500;
+            kidU.y = Math.random() * 100 + 900;
+            kidU.draw();
+
+            kidUp.push(kidU);
+        }
+    }
     
   
-
-        
-     
-       
-
-     
-     
-        
- 
+    
+ }
 
   
-
-  
+    
+    

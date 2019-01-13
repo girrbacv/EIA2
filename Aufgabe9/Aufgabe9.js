@@ -9,7 +9,6 @@ var Aufgabe9;
         createCloud();
         createTrees();
         createSun();
-        createSnow();
         createSleigh();
         createPeople();
         console.log("Canvas started");
@@ -17,8 +16,8 @@ var Aufgabe9;
     // Himmel
     function createSky() {
         crc2.beginPath();
-        crc2.lineTo(0, 670);
-        crc2.lineTo(1300, 0);
+        crc2.lineTo(0, 600);
+        crc2.lineTo(1100, 0);
         crc2.lineTo(0, 0);
         crc2.lineTo(0, 0);
         crc2.closePath();
