@@ -159,18 +159,7 @@ namespace rodelbahnA11 {
             crc2.fill();
         }//cloud2
         
-        function drawCloud3(): void {
-
-            crc2.beginPath();
-            crc2.arc(10, 180, 20, 0, 2 * Math.PI);
-            crc2.arc(30, 180, 40, 0, 2 * Math.PI);
-            crc2.arc(50, 180, 70, 0, 2 * Math.PI);
-            crc2.arc(70, 180, 40, 0, 2 * Math.PI);
-            crc2.arc(100, 180, 20, 0, 2 * Math.PI);
-
-            crc2.fillStyle = "#FFFFFF";
-            crc2.fill();
-        }//cloud3
+        
 
     } //init
 } //namespace

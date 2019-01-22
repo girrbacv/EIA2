@@ -107,16 +107,6 @@ var rodelbahnA11;
             rodelbahnA11.crc2.fillStyle = "#FFFFFF";
             rodelbahnA11.crc2.fill();
         } //cloud2
-        function drawCloud3() {
-            rodelbahnA11.crc2.beginPath();
-            rodelbahnA11.crc2.arc(10, 180, 20, 0, 2 * Math.PI);
-            rodelbahnA11.crc2.arc(30, 180, 40, 0, 2 * Math.PI);
-            rodelbahnA11.crc2.arc(50, 180, 70, 0, 2 * Math.PI);
-            rodelbahnA11.crc2.arc(70, 180, 40, 0, 2 * Math.PI);
-            rodelbahnA11.crc2.arc(100, 180, 20, 0, 2 * Math.PI);
-            rodelbahnA11.crc2.fillStyle = "#FFFFFF";
-            rodelbahnA11.crc2.fill();
-        } //cloud3
     } //init
 })(rodelbahnA11 || (rodelbahnA11 = {})); //namespace
 //# sourceMappingURL=A11Main.js.map
