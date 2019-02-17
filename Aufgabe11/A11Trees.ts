@@ -6,8 +6,8 @@ namespace rodelbahnA11 {
 
         constructor() {
             super();
-            this.xPos = 40 + Math.random() * 200;
-            this.yPos = 800 + Math.random() * 200;
+            this.xPos = 20 + Math.random() * 200;
+            this.yPos = 550 + Math.random() * 200;
         }
 
 

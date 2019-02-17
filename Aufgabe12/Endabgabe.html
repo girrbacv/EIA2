@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rodelhang Terminator</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="Style.css">
+<script src="DrawObjects.js" type="text/javascript" charset="utf-8"></script>
+<script src="GameStart.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="Child.js" type="text/javascript" charset="utf-8"></script>
+<script src="slowChild.js" type="text/javascript" charset="utf-8"></script>
+<script src="Snow.js" type="text/javascript" charset="utf-8"></script>
+<script src="Snowball.js" type="text/javascript" charset="utf-8"></script>
+<script src="Client/DatabaseClient.js" type="text/javascript"
+	charset="utf-8"></script>
+<style>
+.crosshair {
+	cursor: crosshair
+}
+</style>
+<script src="Endabgabe.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<canvas class="crosshair" id="snowball" width=700 height=1100></canvas>
+
+	<div class="container" id="score">
+		<div>
+			<textarea class="child" id="scores" readonly rows="20" cols="40"></textarea>
+		</div>
+		<div>
+			<div class="child" id="yourscore"></div>
+			<div>
+				<form action="https://endabgabe.herokuapp.com/">
+					<input class="child" id="playername" type="text"
+						placeholder="Enter your Name"><br>
+				</form>
+			</div>
+
+			<div>
+				<button class="child" id="savescore" type="button">Save
+					your score</button>
+			</div>
+			<div>
+				<button class="child" id="showtop" type="button">Refresh
+					score list</button>
+			</div>
+			<div>
+				<button class="child" id="playagain" class="button" type="button">Play
+					again</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

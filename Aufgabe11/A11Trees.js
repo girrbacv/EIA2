@@ -3,8 +3,8 @@ var rodelbahnA11;
     class Trees extends rodelbahnA11.DrawObjects {
         constructor() {
             super();
-            this.xPos = 40 + Math.random() * 200;
-            this.yPos = 800 + Math.random() * 200;
+            this.xPos = 20 + Math.random() * 200;
+            this.yPos = 550 + Math.random() * 200;
         }
         draw() {
             rodelbahnA11.crc2.beginPath();

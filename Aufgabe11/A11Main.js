@@ -2,9 +2,10 @@ var rodelbahnA11;
 (function (rodelbahnA11) {
     window.addEventListener("load", init);
     let allMovingObjects = [];
-    // let i: number = 0;
     let fps = 25;
     let imgData;
+    let muni = [];
+    var maxMun = 6;
     function init(_event) {
         let canvas = document.getElementsByTagName("canvas")[0];
         rodelbahnA11.crc2 = canvas.getContext("2d");
@@ -20,22 +21,6 @@ var rodelbahnA11;
         function update() {
             rodelbahnA11.crc2.putImageData(imgData, 0, 0);
             window.setTimeout(update, 1000 / fps);
-            //        for (let i: number = 0; i < allMovingObjects.length; i++) {
-            //            let snowflake: DrawObjects = allMovingObjects[i];
-            //            snowflake.move();
-            //            snowflake.draw(); }
-            //  }
-            //        for (let i: number = 0; i < allMovingObjects.length; i++) {
-            //            let childs: DrawObjects = allMovingObjects[i];
-            //            childs.move();
-            //            childs.draw();
-            //        }
-            //
-            //        for (let i: number = 0; i < childsUp.length; i++) {
-            //            let childu: ChildUp = childsUp[i];
-            //            childu.move();
-            //    childu.draw();
-            //        }
             for (let i = 0; i < allMovingObjects.length; i++) {
                 let object = allMovingObjects[i];
                 object.draw();
@@ -107,6 +92,14 @@ var rodelbahnA11;
             rodelbahnA11.crc2.fillStyle = "#FFFFFF";
             rodelbahnA11.crc2.fill();
         } //cloud2
+        //Munition
+        var xOffset = 950;
+        for (let i = 0; i < maxMun; i++) {
+            let m = new rodelbahnA11.Munition(xOffset, 0);
+            muni.push(m);
+            m.draw();
+            xOffset = xOffset + 50;
+        }
     } //init
 })(rodelbahnA11 || (rodelbahnA11 = {})); //namespace
 //# sourceMappingURL=A11Main.js.map

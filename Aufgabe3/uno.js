@@ -10,7 +10,8 @@ var uno;
     document.addEventListener("DOMContentLoaded", select);
     document.addEventListener("keydown", pressKeyboard);
     let colors = ["red", "blue", "green", "yellow"];
-    let values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "X", "<=>"];
+    let values = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let joker = ["X", "<=>", "+4", "+2"];
     let deck = [{ color: "red", value: "0" }, { color: "blue", value: "0" }, { color: "green", value: "0" }, { color: "yellow", value: "0" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "FW" }, { color: "black", value: "FW" }, { color: "black", value: "FW" }, { color: "black", value: "FW" }];
     let pile = [];
     for (let i = 0; i < colors.length; i++) {

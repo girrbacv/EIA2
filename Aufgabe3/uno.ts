@@ -16,7 +16,8 @@
     }
 
     let colors: string[] = ["red", "blue", "green", "yellow"];
-    let values: string[] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "X", "<=>"];
+    let values: string[] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let joker: string[] = ["X","<=>", "+4","+2"];
     let deck: Card[] = [{ color: "red", value: "0" }, { color: "blue", value: "0" }, { color: "green", value: "0" }, { color: "yellow", value: "0" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "+4" }, { color: "black", value: "FW" }, { color: "black", value: "FW" }, { color: "black", value: "FW" }, { color: "black", value: "FW" }];
     let pile: Card[] = [];
     

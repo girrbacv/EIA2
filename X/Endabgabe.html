@@ -1,0 +1,70 @@
+<!-- Aufgabe: Endabgabe
+Name: Sarah Lönnqvist
+Matrikel: 259116
+Datum: 13.02.2019
+    
+Hiermit versichere ich, dass ich diesen Code selbst geschrieben habe. Er wurde nicht kopiert und auch nicht diktiert.
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="Endabgabe.css">
+<script src="origin.js" type="text/javascript" charset="utf-8"></script>
+<script src="movement.js" type="text/javascript" charset="utf-8"></script>
+<script src="tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="Snowflake.js" type="text/javascript" charset="utf-8"></script>
+<script src="SnowBalls.js" type="text/javascript" charset="utf-8"></script>
+<script src="children.js" type="text/javascript" charset="utf-8"></script>
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
+<script src="DatabaseClient.js" type="text/javascript" charset="utf-8"></script>
+<title>Rodelhang Terminator</title>
+</head>
+<body>
+
+	<!-- start -->
+	<div id="div">
+		<h2>DER RODELHANG TERMINATOR</h2>
+		<button>Start</button>
+		<button id="refresh1">Low-Score list</button>
+		<p id="regeln">
+			Regeln: Du hast 20 Schneebaelle, um soviele Kinder wie moeglich zu
+			treffen. Am Ende kannst du dein <strong>LOW-SCORE</strong> in eine
+			Liste eintragen und nachschauen, auf welchem Rang du bist. Je
+			schneller ein Kind ist, desto mehr Punkte bekommst du.
+		</p>
+	</div>
+	<div id="DB">
+		<fieldset id="output">
+			<h2>LOW-SCORE</h2>
+			<div id="scores1"></div>
+		</fieldset>
+		<button id="start">back</button>
+	</div>
+
+	<!-- spiel -->
+	<canvas width=360 height=700></canvas>
+	<div id="hud">
+		<p id="score"></p>
+		<p id="throw"></p>
+	</div>
+
+	<!-- Ende -->
+	<div id="end">
+		<h2>Game Over</h2>
+		<p>Name</p>
+		<input type="text" placeholder="enter your name" >
+		<p id="result"></p>
+		<button type="button" id="insert">Send your Low-Score</button>
+		<button type="button" id="refresh">Low-Score list</button>
+		<button id="new">Play Again</button>
+	</div>
+	<div id="db">
+		<fieldset id="output">
+			<h2>LOW-SCORE</h2>
+			<div id="scores"></div>
+		</fieldset>
+		<button id="back">back</button>
+	</div>
+</body>
+</html>

@@ -3,12 +3,16 @@ namespace rodelbahnA11 {
     export let crc2: CanvasRenderingContext2D;
 
     let allMovingObjects: DrawObjects[] = [];
-    // let i: number = 0;
+   
 
 
     let fps: number = 25;
 
     let imgData: ImageData;
+    let muni: Munition[] = [];
+    var maxMun: number = 6;
+   
+  
 
 
 
@@ -36,28 +40,8 @@ namespace rodelbahnA11 {
 
 
 
-            //        for (let i: number = 0; i < allMovingObjects.length; i++) {
-            //            let snowflake: DrawObjects = allMovingObjects[i];
-            //            snowflake.move();
-            //            snowflake.draw(); }
-
-
-            //  }
-
-            //        for (let i: number = 0; i < allMovingObjects.length; i++) {
-            //            let childs: DrawObjects = allMovingObjects[i];
-            //            childs.move();
-            //            childs.draw();
-
-            //        }
-
-
-            //
-            //        for (let i: number = 0; i < childsUp.length; i++) {
-            //            let childu: ChildUp = childsUp[i];
-            //            childu.move();
-            //    childu.draw();
-            //        }
+            
+            
             for (let i: number = 0; i < allMovingObjects.length; i++) {
                 let object: DrawObjects = allMovingObjects[i];
                 object.draw();
@@ -159,6 +143,17 @@ namespace rodelbahnA11 {
             crc2.fill();
         }//cloud2
         
+        //Munition
+         var xOffset: number = 950;
+        for (let i: number = 0; i < maxMun; i++) {
+            let m: Munition = new Munition(xOffset, 0);
+            muni.push(m);
+            m.draw();
+            xOffset = xOffset + 50;
+        }
+        
+     
+    
         
 
     } //init
