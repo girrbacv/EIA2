@@ -10,7 +10,7 @@ namespace invino {
         console.log("Init");
         let insertButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("savescore");
         let refreshButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("showtop");
-    refresh(_event);
+        refresh(_event);
         insertButton.addEventListener("click", insert);
         refreshButton.addEventListener("click", refresh);
 

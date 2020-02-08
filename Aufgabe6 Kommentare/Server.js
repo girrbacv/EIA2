@@ -1,10 +1,11 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const Http = require("http"); // importiert Datei als http
 var L06_SendData;
 (function (L06_SendData) {
     console.log("Starting server"); //Konsolenausgabe "Starting server"
     let port = process.env.PORT; //port ist eine nummer
-    if (port == undefined)
+    if (port == undefined) //wenn der port nicht definiert ist....
         port = 8100; //...dann soll port 8100 sein 
     let server = Http.createServer(); //variable server vom Typ Http.Server 
     server.addListener("request", handleRequest); // Listener auf request

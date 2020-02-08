@@ -1,1 +1,1 @@
-{"version":3,"file":"movement.js","sourceRoot":"","sources":["movement.ts"],"names":[],"mappings":""}
+{"version":3,"file":"movement.js","sourceRoot":"","sources":["movement.ts"],"names":[],"mappings":"AAAA;;;;;;EAME;AACF,IAAU,MAAM,CAWf;AAXD,WAAU,MAAM;IACZ,MAAa,QAAS,SAAQ,OAAA,MAAM;QAIhC,IAAI;YACA,KAAK,CAAC,IAAI,EAAE,CAAC;YACb,IAAI,CAAC,CAAC,IAAI,IAAI,CAAC,EAAE,CAAC;YAClB,IAAI,CAAC,CAAC,IAAI,IAAI,CAAC,EAAE,CAAC;QACtB,CAAC;KACJ;IATY,eAAQ,WASpB,CAAA;AACL,CAAC,EAXS,MAAM,KAAN,MAAM,QAWf"}

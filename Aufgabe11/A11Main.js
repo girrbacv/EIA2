@@ -95,7 +95,7 @@ var rodelbahnA11;
         //Munition
         var xOffset = 950;
         for (let i = 0; i < maxMun; i++) {
-            let m = new rodelbahnA11.Munition(xOffset, 0);
+            let m = new Munition(xOffset, 0);
             muni.push(m);
             m.draw();
             xOffset = xOffset + 50;

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Simple database insertion and query for MongoDB
  * @author: Jirka Dell'Oro-Friedl
@@ -63,5 +64,5 @@ exports.findAll = findAll;
 //         else
 //             _callback(JSON.stringify(playerArray));
 //     }
-// } 
+// }
 //# sourceMappingURL=Database.js.map

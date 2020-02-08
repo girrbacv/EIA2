@@ -93,7 +93,7 @@ var uno;
         s.bottom = 40 + "px";
         s.borderRadius = 10 + "px";
         s.color = "white";
-        if (_farbe == "#ffff00") {
+        if (_farbe == "#ffff00") { //Wenn Hintergrund Gelb -> Schrift schwarz
             s.color = "black";
         }
     }
@@ -103,71 +103,71 @@ var uno;
         n = Number(i);
         for (let d = 0; d < n; d++) {
             let l = random(15); //l = Zufallswert von 0-14 (alle Karten)
-            if (l == 13 && karte_Plus_4.farben.length > 0) {
+            if (l == 13 && karte_Plus_4.farben.length > 0) { //Wenn l = 13 dann generiere eine schwarze +4
                 c = "#000000";
                 karte_Plus_4.farben.pop();
                 placeDiv(c, "+4", d);
                 continue;
             }
-            else if (l == 13 && karte_Plus_4.farben.length <= 0) {
+            else if (l == 13 && karte_Plus_4.farben.length <= 0) { //Wenn l = 13 & farbenArray Länge <= 0 dann continue (d--) da sonst Karte übersprungen
                 d--;
                 continue;
             }
             else {
-                if (l == 14 && karte_Farbenwunsch.farben.length > 0) {
+                if (l == 14 && karte_Farbenwunsch.farben.length > 0) { //Wenn l = 14 dann generiere schwarze Farbwahl
                     c = "#000000";
                     karte_Farbenwunsch.farben.pop();
                     placeDiv(c, "Farbwunsch", d);
                     continue;
                 }
-                else if (l == 14 && karte_Farbenwunsch.farben.length <= 0) {
+                else if (l == 14 && karte_Farbenwunsch.farben.length <= 0) { //Wenn l = 14 & karte_Farbenwunsch.farben.length <= 0 dann continue (d-- da sonst Karte übersprungen)
                     d--;
                     continue;
                 }
-                else {
+                else { //Wenn l =/= 13 || 14 dann vergebe Farbe an Kartenwert
                     let r = random(4); //random Zahl von 0-3 jeweils eine Farbe
                     switch (r) {
-                        case 0:
+                        case 0: //Wenn r = 0 dann rote Farbe
                             c = "#ff0000"; //rot
                             if (deckArray[l].farben[0] || deckArray[l].farben[1] == 0) {
                                 placeDiv(c, deckArray[l].typ, d);
                                 deckArray[l].farben.splice(0, 1);
                                 continue;
                             }
-                            else {
+                            else { //Wenn Kombination aus Wert und Farbe <= 0 dann continue (d-- da sonst Karte übersprungen)
                                 d--;
                                 continue;
                             }
-                        case 1:
+                        case 1: //Wenn r = 1 dann grüne Farbe
                             c = "#00ff00"; //grün
                             if (deckArray[l].farben[2] || deckArray[l].farben[3] == 1) {
                                 placeDiv(c, deckArray[l].typ, d);
                                 deckArray[l].farben.splice(2, 1);
                                 continue;
                             }
-                            else {
+                            else { //Wenn Kombination aus Wert und Farbe <= 0 dann continue (d-- da sonst Karte übersprungen)
                                 d--;
                                 continue;
                             }
-                        case 2:
+                        case 2: //Wenn r = 2 dann blaue Farbe
                             c = "#0000ff"; //blau
                             if (deckArray[l].farben[4] || deckArray[l].farben[5] == 2) {
                                 placeDiv(c, deckArray[l].typ, d);
                                 deckArray[l].farben.splice(4, 1);
                                 continue;
                             }
-                            else {
+                            else { //Wenn Kombination aus Wert und Farbe <= 0 dann continue (d-- da sonst Karte übersprungen)
                                 d--;
                                 continue;
                             }
-                        case 3:
+                        case 3: //Wenn r = 3 dann gelbe Farbe
                             c = "#ffff00"; //gelb
                             if (deckArray[l].farben[6] || deckArray[l].farben[7] == 3) {
                                 placeDiv(c, deckArray[l].typ, d);
                                 deckArray[l].farben.splice(6, 1);
                                 continue;
                             }
-                            else {
+                            else { //Wenn Kombination aus Wert und Farbe <= 0 dann continue (d-- da sonst Karte übersprungen)
                                 d--;
                                 continue;
                             }

@@ -1,8 +1,8 @@
 var Endabgabe;
 (function (Endabgabe) {
     class SlowChild extends Endabgabe.ChildDown {
-        constructor(...args) {
-            super(...args);
+        constructor() {
+            super(...arguments);
             this.points = 10;
         }
         moveUp() {

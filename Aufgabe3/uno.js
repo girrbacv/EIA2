@@ -88,7 +88,7 @@ var uno;
     }
     // mit Leertaste eine Karte ziehen
     function pressKeyboard(_event) {
-        if (_event.keyCode == 32) {
+        if (_event.keyCode == 32) { // 32 ist der Wert für space, jede Taste hat einen anderen Wert
             drawFromstack();
         }
     }
