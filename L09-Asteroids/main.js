@@ -13,4 +13,4 @@ var L09_Asteroids;
         console.log("Asteroid paths:", L09_Asteroids.asteroidPaths);
     }
 })(L09_Asteroids || (L09_Asteroids = {}));
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=Main.js.map
